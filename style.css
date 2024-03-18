@@ -29,3 +29,18 @@ p {
     place-content: center;
     justify-content: stretch;
 }
+.block-radio,
+.inputPhone {
+    display: grid;
+    gap: 7px;
+    justify-content: start;
+}
+.block-radio {
+    padding: 20px 0;
+}
+[name="send"] {
+    padding: 7px;
+    background-color: green;
+    border: none;
+    color: #fff;
+}

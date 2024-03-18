@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="pl" />
-<title>Godziny otwarcia</title>
+<title>Phone</title>
 <script src="scriptControlPhone.js"></script>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
@@ -14,22 +14,27 @@
 <header></header>
 <main>
     <section class="container">
-        <h1>Wprowadznie nr telefonu: </h1>
+        <h1>Entering a telephone number:</h1>
         <p>
-            Walidacja inputów za pomocą czystego JS.
+            Input validation using pure JS. </br>Autocomplete area code and limit to 9 characters.
         </p>
-        <div id="gama" class="inputTime">
-            <div class="bodyInput">
-            <label for="phone"> Nr telefonu </label> <input id="phone" type="text" name="phone" class="a4">
+        <div id="gama" class="inputPhone">
+            <div class="block-radio">
+                <label><input type="radio" name="codephone" value="+48" checked> Poland </label>
+                <label><input type="radio" name="codephone" value="+44"> Great Britain </label>
+                <label><input type="radio" name="codephone" value="+33"> France </label>
             </div>
-            <input type="submit" name="send" value="ok">
+            <div class="bodyInput">
+            <label for="phone"> Phone number: </label> <input id="phone" type="text" name="phone" class="a4">
+            </div>
+            <input type="submit" name="send" value="Ok, phone is corect">
         </div>
     </section>
 </main>
 <footer> Copyright © Krowdel </footer>
 <script> 
 if(document.querySelector('[name="phone"]')) {
-    const controlPhone = new ControlPhonex('[name="phone"]', '[name="send"]');
+    const controlPhone = new ControlPhonex('[name="phone"]', '[name="send"]', '[name="codephone"]');
 } 
 </script>
 </body>
